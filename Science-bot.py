@@ -24,7 +24,7 @@ model = NeuralNet(input_size, hidden_size, output_size).to(device)
 model.load_state_dict(model_state)
 model.eval()
 
-def sciencebot():
+def sciencebot(sentence):
     bot_name = " Science Bot"
     print("Let's tak about science! type 'quit' to exit")
     while True:
@@ -49,4 +49,5 @@ def sciencebot():
                 print(f"{bot_name}: {random.choice(intent['responses'])}")
     else:
         print(f"{bot_name}: I do not understand...")
+    return sentence
         
